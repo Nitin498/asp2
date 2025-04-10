@@ -1,46 +1,103 @@
 /* General Styles */
 body {
-   margin: 0;
-  font-family: Arial, sans-serif;
-  background-image: url('camera1.jpeg'); 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #fff; 
-  }
-  
-  header {
-    background: #333;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('camera1.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; 
+}
+
+header {
+    background: rgba(51, 51, 51, 0.8); /* Slight transparency */
     color: #fff;
     padding: 10px 0;
     text-align: center;
-  }
-  
-  nav ul {
+}
+
+nav ul {
     list-style: none;
     padding: 0;
-  }
-  
-  nav ul li {
+}
+
+nav ul li {
     display: inline;
     margin: 0 15px;
-  }
-  
-  nav ul li a {
+}
+
+nav ul li a {
     color: #fff;
     text-decoration: none;
-  }
-  
-  main {
-  background-image: url('camera1.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 40px;
-  color: #fff;
-  }
-  
-  footer {
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+main {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 40px;
+    color: #fff;
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    border-radius: 5px;
+}
+
+/* Article Styles */
+article {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2); /* Slightly more opaque */
+    border-radius: 5px;
+}
+
+/* Button Styles */
+button {
+    background: #ffcc00; /* Button color */
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #e6b800; /* Darker shade on hover */
+}
+
+/* Form Styles */
+form {
+    margin-top: 20px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background: #ffcc00;
+    color: #333;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background: #e6b800;
+}
+
+footer {
     background: #333;
     color: #fff;
     text-align: center;
@@ -48,12 +105,20 @@ body {
     position: fixed;
     width: 100%;
     bottom: 0;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 600px) {
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
     nav ul li {
-      display: block;
-      margin: 10px 0;
+        display: block;
+        margin: 10px 0;
     }
-  }
+
+    main {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    button {
+        width: 100%; /* Full width buttons on small screens */
+    }
+}
